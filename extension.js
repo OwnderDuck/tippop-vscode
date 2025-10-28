@@ -1,3 +1,5 @@
+// Copyright (c) 2025 OwnderDuck
+// SPDX-License-Identifier: MIT
 const vscode = require('vscode');
 
 let statusItem = null;

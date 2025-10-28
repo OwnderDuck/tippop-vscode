@@ -46,4 +46,4 @@ Add your own messages in settings.json:
 
 ## 📜 License / 许可证
 
-[MIT License © 2025 OwnderDuck]()
+[MIT License © 2025 OwnderDuck](https://github.com/OwnderDuck/tippop-vscode/blob/main/LICENSE)

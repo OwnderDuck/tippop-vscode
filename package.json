@@ -4,6 +4,7 @@
   "description": "Show custom text in the VSCode status bar",
   "version": "1.0.0",
   "publisher": "OwnderDuck",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.84.0"
   },
