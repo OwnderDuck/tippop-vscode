@@ -1,0 +1,103 @@
+{
+  "name": "tippop-vscode",
+  "displayName": "Tippop Vscode",
+  "description": "Show custom text in the VSCode status bar",
+  "version": "1.0.0",
+  "publisher": "OwnderDuck",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./extension.js",
+  "icon": "ffff.png", 
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.toggleStatus",
+        "title": "Toggle Status Text"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Status Text Extension",
+      "properties": {
+        "statusText.messages": {
+          "type": "array",
+          "default": [
+          "$(smiley) Hello World!",
+  "$(code) \"Programs must be written for people to read, and only incidentally for machines to execute.\" – Harold Abelson",
+  "$(book) \"Talk is cheap. Show me the code.\" – Linus Torvalds",
+  "$(rocket) \"First, solve the problem. Then, write the code.\" – John Johnson",
+  "$(smiley) \"Simplicity is the soul of efficiency.\" – Austin Freeman",
+  "$(flame) \"Any fool can write code that a computer can understand. Good programmers write code that humans can understand.\" – Martin Fowler",
+  "$(zap) \"Before software can be reusable it first has to be usable.\" – Ralph Johnson",
+  "$(beaker) \"The most disastrous thing that you can ever learn is your first programming language.\" – Alan Kay",
+  "$(gear) \"The best way to get a project done faster is to start sooner.\" – Jim Highsmith",
+  "$(check) \"Deleted code is debugged code.\" – Jeff Sickel",
+  "$(bug) \"If debugging is the process of removing bugs, then programming must be the process of putting them in.\" – Edsger Dijkstra",
+  "$(light-bulb) \"The only way to learn a new programming language is by writing programs in it.\" – Dennis Ritchie",
+  "$(terminal) \"Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday’s code.\" – Dan Salomon",
+  "$(smiley) \"Programming isn’t about what you know; it’s about what you can figure out.\" – Chris Pine",
+  "$(rocket) \"The sooner you start to code, the longer the program will take.\" – Roy Carlson",
+  "$(flame) \"Premature optimization is the root of all evil.\" – Donald Knuth",
+  "$(zap) \"Walking on water and developing software from a specification are easy if both are frozen.\" – Edward V. Berard",
+  "$(book) \"Measuring programming progress by lines of code is like measuring aircraft building progress by weight.\" – Bill Gates",
+  "$(gear) \"The most important property of a program is whether it accomplishes the intention of its user.\" – C.A.R. Hoare",
+  "$(beaker) \"The best performance improvement is the transition from the nonworking state to the working state.\" – J. Osterhout",
+  "$(smiley) \"Programming is the art of telling another human what one wants the computer to do.\" – Donald Knuth",
+  "$(rocket) \"Controlling complexity is the essence of computer programming.\" – Brian Kernighan",
+  "$(flame) \"The function of good software is to make the complex appear simple.\" – Grady Booch",
+  "$(zap) \"Good code is its own best documentation.\" – Steve McConnell",
+  "$(book) \"The cheapest, fastest, and most reliable components are those that aren’t there.\" – Gordon Bell",
+  "$(gear) \"The trouble with programmers is that you can never tell what a programmer is doing until it’s too late.\" – Seymour Cray",
+  "$(bug) \"The best error message is the one that never shows up.\" – Thomas Fuchs",
+  "$(check) \"The most effective debugging tool is still careful thought, coupled with judiciously placed print statements.\" – Brian Kernighan",
+  "$(light-bulb) \"The purpose of software engineering is to control complexity, not to create it.\" – Pamela Zave",
+  "$(terminal) \"The best programs are written so that computing machines can perform them quickly and so that human beings can understand them clearly.\" – Donald Knuth",
+  "$(smiley) \"The key to performance is elegance, not battalions of special cases.\" – Jon Bentley",
+  "$(rocket) \"The best thing about a boolean is even if you are wrong, you are only off by a bit.\" – Anonymous",
+  "$(flame) \"The best code is no code at all.\" – Jeff Atwood",
+  "$(zap) \"The best design is the simplest one that works.\" – Albert Einstein (adapted)",
+  "$(book) \"The best way to predict the future is to invent it.\" – Alan Kay",
+  "$(gear) \"The best way to get the right answer on the internet is not to ask a question; it’s to post the wrong answer.\" – Cunningham’s Law",
+  "$(beaker) \"The best way to learn is to teach.\" – Frank Oppenheimer",
+  "$(smiley) \"The best way to write secure code is not to write code at all.\" – Bruce Schneier",
+  "$(rocket) \"The best way to write maintainable code is to write less code.\" – Sandi Metz",
+  "$(flame) \"The best way to write fast code is to keep it simple.\" – Rob Pike",
+  "$(zap) \"The best way to write reliable code is to write tests.\" – Kent Beck",
+  "$(book) \"The best way to write reusable code is to write code that is easy to understand.\" – Robert C. Martin",
+  "$(gear) \"The best way to write scalable code is to write code that is easy to change.\" – Martin Fowler",
+  "$(beaker) \"The best way to write efficient code is to write correct code.\" – Bjarne Stroustrup",
+  "$(smiley) \"The best way to write beautiful code is to write code that works.\" – Donald Knuth",
+  "$(rocket) \"The best way to write elegant code is to write code that is simple.\" – Edsger Dijkstra",
+  "$(flame) \"The best way to write robust code is to write code that is easy to test.\" – Kent Beck",
+  "$(zap) \"The best way to write flexible code is to write code that is easy to extend.\" – Grady Booch",
+  "$(book) \"The best way to write portable code is to write code that is standard.\" – Brian Kernighan"
+],
+          "description": "Status bar random text pool, supports VSCode Codicon icons (e.g. $(flame))"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.84.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "20.x",
+    "eslint": "^8.50.0",
+    "glob": "^10.3.10",
+    "mocha": "^10.2.0",
+    "typescript": "^5.2.2",
+    "vscode-test": "^2.3.0"
+  }
+}
